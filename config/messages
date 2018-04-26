@@ -1,0 +1,16 @@
+Subject: Avertissement pour labo SMTP
+
+ATTENTION: pour les groupes qui doivent encore présenter leur labo SMTP.
+Nous avons étalé les groupes pour finir avant 10h (mercredi). Merci de bien vérifier votre heure de passage.
+Les groupes qui étaient inscrits la semaine passée et qui ne se sont pas présentés, merci de vérifier que vous êtes bien sur la feuille.
+
+****
+Subject: Info sur le Dockerfile
+
+Plus précisément, il doit être dans le CONTEXTE. Le contexte, c'est le répertoire à la fin de la commande 'docker build'.
+Souvent, on se met à côté du Dockerfile et on tape 'docker build -t bi/dule .'. Le dernier . signifie "répertoire courant".
+Parfois, vous allez trouver/utiliser des exemples où on fait "docker build -t bi/dule ../un/autre/path".
+Au moment du build, tous les fichiers dans/sous CONTEXTE sont envoyés depuis la machine où vous tapez la commande VERS le docker host (par exemple, depuis votre OS Mac OS ou Windows vers la VM linux, mais ça pourrait même être une autre machine).
+C'est pour ça qu'il faut faire attention à ce que le CONTEXTE ne contienne pas trop de fichiers.
+Dernier conseil pour optimiser vos temps de build: il y a un fichier
+.dockerignore que vous pouvez utiliser pour indiquer que des fichiers se trouvant dans CONTEXTE ne doivent pas être transférés vers le docker host.

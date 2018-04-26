@@ -1,0 +1,4 @@
+smtpAddress=localhost
+smtpPort=2525
+numberOfGroups=8
+witnessesToCC=miguel.lopesgouveia@heig-vd.ch
