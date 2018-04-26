@@ -62,7 +62,7 @@ public class Prank
       return new ArrayList(witnessRecipients);
    }
    
-   public Message generateMailMessage()
+   public Message generateMessage()
    {
       Message message = new Message();
       
