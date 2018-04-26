@@ -18,19 +18,34 @@ public class Person
    
    private String lastName;
    
-   private final String address;
+   private final String mail;
    
-   public Person(String firstName, String lastName, String address)
+   public Person(String firstName, String lastName, String mail)
    {
       this.firstName = firstName;
       this.lastName = lastName;
-      this.address = address;
+      this.mail = mail;
    }
    
-   public Person(String address)
+   public Person(String mail)
    {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.address = address;
+      this.firstName = mail.substring(0, mail.indexOf('.'));
+      this.lastName = mail.substring(mail.indexOf('.'), mail.indexOf('@'));
+      this.mail = mail;
+   }
+   
+   public String getFirstName()
+   {
+      return firstName;
+   }
+   
+   public String getLastName()
+   {
+      return lastName;
+   }
+   
+   public String getMail()
+   {
+      return mail;
    }
 }
