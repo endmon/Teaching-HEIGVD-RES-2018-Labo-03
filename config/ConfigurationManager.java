@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : ConfigurationManager.java
+ * Authors : Remy Nasserzare, Miguel Gouveia
  */
+
 package ch.heigvd.res.config;
 
 import java.io.*;
@@ -10,10 +10,9 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.List;
 import ch.heigvd.res.model.Person;
-/**
- *
- * @author 
- */
+
+
+
 public class ConfigurationManager implements ConfigurationManagerInterface
 {
    private String smtpAddress;
@@ -43,6 +42,7 @@ public class ConfigurationManager implements ConfigurationManagerInterface
       this.witnessesToCC = new ArrayList<>();
       String witnesses = properties.getProperty("witnessesToCC");
       String[] witnessesAddresses = witnesses.split(".");
+      
       for (String address : witnessesAddresses)
       {
          this.witnessesToCC.add(new Person(address));
@@ -52,13 +52,16 @@ public class ConfigurationManager implements ConfigurationManagerInterface
    private List<Person> loadAddressesFromFile(String fileName) throws IOException
    {
       List<Person> result;
+      
       try (FileInputStream file = new FileInputStream(fileName))
       {
          InputStreamReader isr = new InputStreamReader(file, "UTF-8");
+         
          try (BufferedReader reader = new BufferedReader(isr))
          {
             result = new ArrayList<>();
             String address = reader.readLine();
+            
             while (address != null)
             {
                result.add(new Person(address));
@@ -72,16 +75,20 @@ public class ConfigurationManager implements ConfigurationManagerInterface
    private List<String> loadMessagesFromFile(String filename) throws IOException
    {
       List<String> result;
+      
       try (FileInputStream file = new FileInputStream(filename))
       {
          InputStreamReader isr = new InputStreamReader(file, "UTF-8");
+         
          try (BufferedReader reader = new BufferedReader(isr))
          {
             result = new ArrayList<>();
             String line = reader.readLine();
+            
             while (line != null)
             {
                StringBuilder body = new StringBuilder();
+               
                while ((line != null) && (!line.equals("****")))
                {
                   body.append(line);
