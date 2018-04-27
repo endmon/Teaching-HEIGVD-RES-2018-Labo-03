@@ -1,14 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : Message
+ * Authors : Remy Nasserzare, Miguel Gouveia
  */
+
 package ch.heigvd.res.model;
 
-/**
- *
- * @author 
- */
+
 public class Message
 {
    private String from;
