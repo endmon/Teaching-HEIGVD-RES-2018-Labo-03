@@ -2,6 +2,8 @@
 
 # Teaching-HEIGVD-RES-2018-Labo-03
 
+# SMTP
+
 ## This Repository
 
 We made this entire repo for a very cool exercise we have to do !
