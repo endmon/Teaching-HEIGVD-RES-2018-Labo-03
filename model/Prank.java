@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : Prank
+ * Authors : Miguel Gouveia, Remy Nasserzare
  */
 package ch.heigvd.res.model;
 
@@ -11,10 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author 
- */
+
 public class Prank
 {
    private Person victimeSender;
