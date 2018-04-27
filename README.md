@@ -4,7 +4,9 @@
 
 # SMTP
 
+
 ## This Repository
+
 
 We made this entire repo for a very cool exercise we have to do !
 The purpose is to create a SMTP server and to also create a class in order to send spam randomly.
@@ -20,7 +22,9 @@ This random spam we want to send is created using a few classes such as :
 We stock the project on a docker container to help with the implementation of the project on other computers, 
 and the mockmock.jar server can be found in the docker !
 
+
 ## PrankGenerator Configuration
+
 
 In order to use it, we have to modify a couple files :
 
@@ -36,7 +40,9 @@ In order to use it, we have to modify a couple files :
   
 (you have to write one e-mail per line for this prank.)
 
+
 ## Docker configuration
+
 
 In order to run the server, you may want to build and run it.
 Here's how you should do it (on a Linux OS) :
@@ -52,9 +58,14 @@ also the port 8080 to access the mockmock server web interface.
 
    " sudo docker run -p 8080:8080 -p 2525:2525 mock-smtp "
 
+
 ## Let's Prank People !
+
 
 Everything is now up and running!
 Now, you can build and run the project and it should start the campaign according to the configuration of your files.
+
+
+
 
 # ENJOY YOUR PRANKS RESPONSIBLY ! ;)
