@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : prankmail.java
+ * Authors : Miguel Gouveia, Remy Nasserzare
  */
 package ch.heigvd.res;
 
@@ -17,16 +16,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-/**
- *
- * @author
- */
+
+
 public class prankmail {
 
    /**
     * @param args the command line arguments
     */
    public static void main(String[] args) {
+      
       try
       {
          ConfigurationManager manager = new ConfigurationManager();
@@ -39,12 +37,10 @@ public class prankmail {
          for (Prank prank : pranks)
          {
             mail = prank.generateMessage();
-            
             client.sendMessage(mail);
          }
          
-         
-      }catch (IOException e)
+      } catch (IOException e)
       {
          System.err.println(e.getMessage());
       }
