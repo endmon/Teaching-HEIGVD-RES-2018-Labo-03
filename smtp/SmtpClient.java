@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 
+ * @author endmon
  */
 public class SmtpClient implements SmtpClientInterface
 {
@@ -43,6 +43,8 @@ public class SmtpClient implements SmtpClientInterface
       writer.printf("EHLO localhost\r\n");
       line = reader.readLine();
       LOG.info(line);
+      
+      //throws error if we receive a different message than 250 from the server
       if (!line.startsWith("250"))
       {
          throw new IOException("SMTP error: " + line);
@@ -91,6 +93,7 @@ public class SmtpClient implements SmtpClientInterface
          LOG.info(line);
       }
       
+      // we send the data
       writer.write("DATA");
       writer.write("\r\n");
       writer.flush();
