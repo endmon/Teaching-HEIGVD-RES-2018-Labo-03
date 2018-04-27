@@ -51,7 +51,7 @@ Here's how you should do it (on a Linux OS) :
 
 * To build your docker image open a terminal and type :
 
-     " sudo docker build -t mock-smtp "
+     " sudo docker build -t mock-smtp ."
 
 this instruction will run the docker containing the smtp server with port 2525 used for the protocol SMTP and
 also the port 8080 to access the mockmock server web interface.
