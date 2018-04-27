@@ -12,9 +12,7 @@ import java.util.regex.Pattern;
 public class Person
 {
    private String firstName;
-   
    private String lastName;
-   
    private final String mail;
    
    public Person(String firstName, String lastName, String mail)
@@ -31,5 +29,20 @@ public class Person
       this.mail = mail;
    }
    
+
+   public String getFirstName()
+   {
+      return firstName;
+   }
+   
+   public String getLastName()
+   {
+      return lastName;
+   }
+   
+   public String getMail()
+   {
+      return mail;
+   }
    
 }
