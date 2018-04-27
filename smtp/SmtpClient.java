@@ -99,19 +99,26 @@ public class SmtpClient implements SmtpClientInterface
       writer.write("Content-Type: text/plain; charset=\"utf-8\"\r\n");
       writer.write("From: " + message.getFrom() + "\r\n");
       
-      writer.write("To: " + message.getTo()[0]);
-      for (int i = 1; i < message.getTo().length; i++)
+      if (message.getTo().length > 0)
       {
-         writer.write(", " + message.getTo()[i]);
+         writer.write("To: " + message.getTo()[0]);
+         for (int i = 1; i < message.getTo().length; i++)
+         {
+            writer.write(", " + message.getTo()[i]);
+         }
+         writer.write("\r\n");
       }
-      writer.write("\r\n");
+         
+      if (message.getCc().length > 0)
+      {
+         writer.write("Cc: " + message.getCc()[0]);
+         for (int i = 1; i < message.getCc().length; i++)
+         {
+            writer.write(", " + message.getCc()[i]);
+         }
+         writer.write("\r\n");
+      }
       
-      writer.write("Cc: " + message.getCc()[0]);
-      for (int i = 1; i < message.getCc().length; i++)
-      {
-         writer.write(", " + message.getCc()[i]);
-      }
-      writer.write("\r\n");
       writer.flush();
       LOG.info(message.getBody());
       writer.write(message.getBody());

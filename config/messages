@@ -14,3 +14,11 @@ Au moment du build, tous les fichiers dans/sous CONTEXTE sont envoyés depuis la
 C'est pour ça qu'il faut faire attention à ce que le CONTEXTE ne contienne pas trop de fichiers.
 Dernier conseil pour optimiser vos temps de build: il y a un fichier
 .dockerignore que vous pouvez utiliser pour indiquer que des fichiers se trouvant dans CONTEXTE ne doivent pas être transférés vers le docker host.
+
+****
+Subject: Info pour le groupe de vendredi
+
+IMPORTANT POUR LE GROUPE DE VENDREDI. Comme le nombre de super-motivés a explosé nos prévisions, nous allons faire les démos en parallèle. 
+Nous avons donc MODIFIE la feuille avec les ordres de passage. Vérifiez pour voir si votre slot a été décalé.
+Vérifiez aussi que vous avez bien vos noms et l'URL de votre repo GitHub, il nous manque quels infos.
+Par exemple, on aime bien Joël, mais 5 minutes vont nous suffir pendant la session.
