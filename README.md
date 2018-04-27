@@ -19,7 +19,7 @@ This random spam we want to send is created using a few classes such as :
 * ConfigManager : reads the files config.properties, messages, and victimes and gives us access to the data.
 * SmtpClient : used to connect a mockmock server and send the prank.
 
-We stock the project on a docker container to help with the implementation of the project on other computers, 
+We store the project in a docker container to help with the implementation of the project on other computers, 
 and the mockmock.jar server can be found in the docker !
 
 
