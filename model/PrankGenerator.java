@@ -27,6 +27,7 @@ public class PrankGenerator
       List<Person> availableVictimes = new ArrayList(victimes);
       Collections.shuffle(availableVictimes);
       List<Group> groups = new ArrayList<>();
+      
       for (int i = 0; i < numberOfGroups; i++)
       {
          Group group = new Group();
@@ -34,6 +35,7 @@ public class PrankGenerator
       }
       int turn = 0;
       Group targetGroup;
+      
       while (availableVictimes.size() > 0)
       {
          targetGroup = groups.get(turn);
@@ -63,7 +65,7 @@ public class PrankGenerator
       for (Group group : groups)
       {
          Prank prank = new Prank();
-         
+   
          List<Person> victimes = group.getMembers();
          Collections.shuffle(victimes);
          Person sender = victimes.remove(0);
