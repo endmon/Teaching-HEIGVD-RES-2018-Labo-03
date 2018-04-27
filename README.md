@@ -1,6 +1,6 @@
-# Teaching-HEIGVD-RES-2018-Labo-03
+-- Authors : Miguel Lopes Gouveia, Remy Nasserzare --
 
-Authors : Miguel Gouveia, Remy Nasserzare
+# Teaching-HEIGVD-RES-2018-Labo-03
 
 ## This Repository
 
@@ -26,7 +26,7 @@ In order to use it, we have to modify a couple files :
 
   1) put "Subject:MySubject" in the e-mail, or just "Subject:" if you don't want a subject.
   2) write your message.
-  3) at the end of your message, write a line with just "" in it.
+  3) at the end of the message, write a line with just "" in it.
      (the empty lines are not considered by the e-mail.)
 
 * victimes. we will write all the adresses to prank, which will be split in the number of groups you want in the file 
@@ -55,4 +55,4 @@ also the port 8080 to access the mockmock server web interface.
 Everything is now up and running!
 Now, you can build and run the project and it should start the campaign according to the configuration of your files.
 
-# ENJOY ! ;)
+# ENJOY YOUR PRANKS RESPONSIBLY ! ;)
