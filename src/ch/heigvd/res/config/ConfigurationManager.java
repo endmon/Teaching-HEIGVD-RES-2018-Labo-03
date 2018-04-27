@@ -24,10 +24,10 @@ public class ConfigurationManager implements ConfigurationManagerInterface
    
    public ConfigurationManager() throws IOException
    {
-      messages = loadMessagesFromFile("src\\ch\\heigvd\\res\\config\\messages");
-      victimes = loadAddressesFromFile("src\\ch\\heigvd\\res\\config\\victimes");
+      messages = loadMessagesFromFile("messages");
+      victimes = loadAddressesFromFile("victimes");
       
-      loadProperties("src\\ch\\heigvd\\res\\config\\config.properties");
+      loadProperties("config.properties");
    }
    
    private void loadProperties(String filename) throws IOException
