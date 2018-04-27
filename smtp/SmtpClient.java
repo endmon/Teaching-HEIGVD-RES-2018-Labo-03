@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : SmtpClient
+ * Authors : Remy Nasserzare, Miguel Gouveia
  */
 package ch.heigvd.res.smtp;
 
@@ -10,10 +9,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-/**
- *
- * @author endmon
- */
+
 public class SmtpClient implements SmtpClientInterface
 {
    private static final Logger LOG = Logger.getLogger(SmtpClient.class.getName());
