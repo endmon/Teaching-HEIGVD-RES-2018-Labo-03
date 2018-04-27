@@ -24,15 +24,15 @@ In order to use it, we have to modify a couple files :
 
 * messages.utf8. we will write all the different messages that you want to use in your prank, as follows :
 
-** put "Subject:MySubject" in the e-mail, or just "Subject:" if you don't want a subject.
-** write your message.
-** at the end of your message, write a line with just "" in it.
-** the empty lines are not considered by the e-mail.
+  1) put "Subject:MySubject" in the e-mail, or just "Subject:" if you don't want a subject.
+  2) write your message.
+  3) at the end of your message, write a line with just "" in it.
+     (the empty lines are not considered by the e-mail.)
 
 * victims.utf8. we will write all the adresses to prank, which will be split in the number of groups you want in the file 
   config.properties, so you wanna have the number of adresses at least equal to the number of groups.
   
-** you have to write one e-mail per line for this prank.
+(you have to write one e-mail per line for this prank.)
 
 ## Docker configuration
 
@@ -43,12 +43,12 @@ Here's how you should do it (on a Linux OS) :
 
 * To build your docker image open a terminal and type :
 
-** sudo docker build -t mock-smtp
+     " sudo docker build -t mock-smtp "
 
 this instruction will run the docker containing the smtp server with port 2525 used for the protocol SMTP and
 also the port 8080 to access the mockmock server web interface.
 
-** sudo docker run -p 8080:8080 -p 2525:2525 mock-smtp
+   " sudo docker run -p 8080:8080 -p 2525:2525 mock-smtp "
 
 ## Let's Prank People !
 
