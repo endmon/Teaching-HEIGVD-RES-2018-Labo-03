@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * FileName : PrankGenerator
+ * Authors : Miguel Gouveia, Remy Nasserzare
  */
 package ch.heigvd.res.model;
 
@@ -12,10 +11,7 @@ import ch.heigvd.res.model.Person;
 import java.util.*;
 import java.util.logging.Logger;
 
-/**
- *
- * @author 
- */
+
 public class PrankGenerator
 {
    private static final Logger LOG = Logger.getLogger(PrankGenerator.class.getName());
@@ -51,10 +47,8 @@ public class PrankGenerator
    public List<Prank> generatePranks()
    {
       List<Prank> pranks = new ArrayList<>();
-      
       List<String> messages = configurationManager.getMessages();
       int messageIndex = 0;
-      
       int numberOfGroups = configurationManager.getNumberOfGroup();
       int numberOfVictimes = configurationManager.getVictimes().size();
       
@@ -76,7 +70,7 @@ public class PrankGenerator
          prank.setVictimeSender(sender);
          prank.addVictimeRecipients(victimes);
          prank.addWitnessRecipients(configurationManager.getWitnessToCC());
-         
+      
          String message = messages.get(messageIndex);
          messageIndex = (messageIndex + 1) % messages.size();
          prank.setMessage(message);
